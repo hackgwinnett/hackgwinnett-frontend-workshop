@@ -1,0 +1,652 @@
+(notes):
+- use with repl.it, codepen, or something that you can constantly refresh to see changes
+- html stands for hyper-text markup language
+- css stands for cascading style sheets
+- (if anyone asks) ^^
+
+Intro:
+- (talk about what frontend is)
+- frontend is what the user sees
+- frontend web development is usually comprised of html, css, and javascript
+- frontend code is read by the browser's engine and displayed to the user
+- html gives the browser what elements to display, css styles the elements, and javascript makes the webpages dynamic
+
+Elaborate:
+- when combined with backend systems, APIs, and microservices, we can begin to create full-fledged web applications with our frontend skills
+
+
+
+- let's start by giving the website a title
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+- the doctype tag lets older browsers that we are using an html document
+- the title tag lets the browser know what to display on the tab
+
+
+
+- let's add a body and a heading tag
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+</body>
+
+- we have h1, all the way down to h6 tags -- with each number making the heading smaller and smaller
+
+
+
+- we have paragraph (p) tags as well
+- we can do some basic styling with html tags alone
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <p>This is a paragraph</p>
+    <p><strong>This is a bolded paragraph</strong></p>
+    <p><i>This is an italicized paragraph</i></p>
+    <p><strong><i>This is a bolded and italicized paragraph</i></strong></p>
+</body>
+
+- notice how the forward slash in a tag signals the end of that specific element
+
+
+
+- we also have br tags to serve as line breaks between elements
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <p>This is a paragraph</p>
+    <p><strong>This is a bolded paragraph</strong></p>
+    <p><i>This is an italicized paragraph</i></p>
+    <p><strong><i>This is a bolded and italicized paragraph</i></strong></p>
+    <br>
+    <p>Another paragraph!</p>
+</body>
+
+
+
+- html also has lists, the ul tag signals an unorderd list, and the li tag signals a list item
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <p>This is a paragraph</p>
+    <p><strong>This is a bolded paragraph</strong></p>
+    <p><i>This is an italicized paragraph</i></p>
+    <p><strong><i>This is a bolded and italicized paragraph</i></strong></p>
+    <br>
+    <p>Another paragraph!</p>
+    <br>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ul>
+</body>
+
+
+
+- we can do the same thing with unordered lists
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <p>This is a paragraph</p>
+    <p><strong>This is a bolded paragraph</strong></p>
+    <p><i>This is an italicized paragraph</i></p>
+    <p><strong><i>This is a bolded and italicized paragraph</i></strong></p>
+    <br>
+    <p>Another paragraph!</p>
+    <br>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ul>
+    <br>
+    <ol>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ol>
+</body>
+
+
+
+- alright, let's move on to styling now
+- we can use the style tags within the html document to add style properties to our elements
+- here, we are setting our background to a specific rgb value
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(45, 45, 45);
+    }
+</style>
+
+<body>
+    <h1>Hello World!</h1>
+    <p>This is a paragraph</p>
+    <p><strong>This is a bolded paragraph</strong></p>
+    <p><i>This is an italicized paragraph</i></p>
+    <p><strong><i>This is a bolded and italicized paragraph</i></strong></p>
+    <br>
+    <p>Another paragraph!</p>
+    <br>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ul>
+    <br>
+    <ol>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ol>
+</body>
+
+
+
+- our text just got harder to see, so let's fix that
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(45, 45, 45);
+    }
+    h1, p, li {
+        color: white;
+    }
+</style>
+
+<body>
+    <h1>Hello World!</h1>
+    <p>This is a paragraph</p>
+    <p><strong>This is a bolded paragraph</strong></p>
+    <p><i>This is an italicized paragraph</i></p>
+    <p><strong><i>This is a bolded and italicized paragraph</i></strong></p>
+    <br>
+    <p>Another paragraph!</p>
+    <br>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ul>
+    <br>
+    <ol>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ol>
+</body>
+
+
+
+- we can also change the font properties of our text
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(45, 45, 45);
+    }
+    h1, p, li {
+        color: white;
+        font-family: arial;
+    }
+</style>
+
+<body>
+    <h1>Hello World!</h1>
+    <p>This is a paragraph</p>
+    <p><strong>This is a bolded paragraph</strong></p>
+    <p><i>This is an italicized paragraph</i></p>
+    <p><strong><i>This is a bolded and italicized paragraph</i></strong></p>
+    <br>
+    <p>Another paragraph!</p>
+    <br>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ul>
+    <br>
+    <ol>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ol>
+</body>
+
+- that already looks a lot nicer
+
+
+
+- we could also put all of our text elements into a div tag and center it using css
+
+<!DOCTYPE html>
+
+<head>
+    <title>My Webpage!</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(45, 45, 45);
+    }
+    h1, p, li {
+        color: white;
+        font-family: arial;
+    }
+    div {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Hello World!</h1>
+        <p>This is a paragraph</p>
+        <p><strong>This is a bolded paragraph</strong></p>
+        <p><i>This is an italicized paragraph</i></p>
+        <p><strong><i>This is a bolded and italicized paragraph</i></strong></p>
+        <br>
+        <p>Another paragraph!</p>
+        <br>
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+        <br>
+        <ol>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ol>
+    </div>
+</body>
+
+---------------------------------------------------------------------------
+
+- that's enough of that, let's move on to actually making something very simple using javascript
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+</style>
+
+<body>
+</body>
+
+<script>
+</script>
+
+- we can start out with the same type of structure, this time adding a script tag to let the browser know that we are adding javascript to our page
+
+
+
+- let's start off by making a button -- as you can see, it doesn't do anything right now
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+</style>
+
+<body>
+    <button>click me!</button>
+</body>
+
+<script>
+</script>
+
+
+
+- we can then write a simple javascript function to make an alert whenever someone clicks on our button, linking this function to when the button is clicked
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+</style>
+
+<body>
+    <button onclick="buttonClick()">click me!</button>
+</body>
+
+<script>
+    function buttonClick() {
+        alert("hello!")
+    }
+</script>
+
+
+
+- that's a bit boring, let's make something that can read somebody's name from a textbox and give them a customized greeting
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+</style>
+
+<body>
+    <input id="nameInput">
+    <button onclick="buttonClick()">click me!</button>
+</body>
+
+<script>
+    function buttonClick() {
+
+    }
+</script>
+
+- again, as you can see, this doesn't do anything at the moment
+- however, we gave this textbox its own id, and you'll see why in a second
+
+
+
+- when the button is pressed, our javascript function gets the value in the textbox and then greets our user
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+</style>
+
+<body>
+    <input id="nameInput">
+    <button onclick="buttonClick()">click me!</button>
+</body>
+
+<script>
+    function buttonClick() {
+        var name = document.getElementById("nameInput").value;
+        alert("hello " + name + "!");
+    }
+</script>
+
+
+
+
+- that's cool, but what if we wanted our javascript to change an element on the screen?
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+</style>
+
+<body>
+    <input id="nameInput">
+    <button onclick="buttonClick()">click me!</button>
+    <h2 id="greeting">Hello...</h2>
+</body>
+
+<script>
+    function buttonClick() {
+        var name = document.getElementById("nameInput").value;
+        document.getElementById("greeting").innerHTML = "Hello " + name + "!"
+    }
+</script>
+
+- we can do this with our javascript function using the same id property
+- setting the 'innerHTML' of an element is possible if it is assigned its own id
+
+
+
+- our app looks a litle bit ugly right now, let's fix that
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+    div {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div>
+        <input id="nameInput">
+        <button onclick="buttonClick()">click me!</button>
+        <h2 id="greeting">Hello...</h2>
+    </div>
+</body>
+
+<script>
+    function buttonClick() {
+        var name = document.getElementById("nameInput").value;
+        document.getElementById("greeting").innerHTML = "Hello " + name + "!"
+    }
+</script>
+
+- we can start by wrapping all our elements inside a div and centering it using css
+
+
+
+- let's make the font of our text nicer and add some space for our elements at the top of our document
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+    div {
+        text-align: center;
+    }
+    h2 {
+        font-family: arial;
+    }
+</style>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <input id="nameInput">
+        <button onclick="buttonClick()">click me!</button>
+        <h2 id="greeting">Hello...</h2>
+    </div>
+</body>
+
+<script>
+    function buttonClick() {
+        var name = document.getElementById("nameInput").value;
+        document.getElementById("greeting").innerHTML = "Hello " + name + "!"
+    }
+</script>
+
+- we can change the font family of our h2 element using css and add space for our elements at the top of our document using css
+
+
+
+- let's make this look better!
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+    div {
+        text-align: center;
+    }
+    h2 {
+        font-family: arial;
+        color: rgb(150, 150, 150);
+    }
+    body {
+        background-color: rgb(45, 45, 45);
+    }
+    button {
+        border: none;
+        background-color: rgb(100, 100, 100);
+        color: rgb(45, 45, 45);
+        font-size: medium;
+    }
+    input {
+        color: rgb(200, 200, 200);
+        background-color: rgb(100, 100, 100);
+        font-size: 16px;
+        border: none;
+    }
+</style>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <input id="nameInput">
+        <button onclick="buttonClick()">click me!</button>
+        <h2 id="greeting">Hello...</h2>
+    </div>
+</body>
+
+<script>
+    function buttonClick() {
+        var name = document.getElementById("nameInput").value;
+        document.getElementById("greeting").innerHTML = "Hello " + name + "!"
+    }
+</script>
+
+
+
+- let's also add a header to our webpage
+
+<!DOCTYPE html>
+
+<head>
+    <title>Javascript WebApp</title>
+</head>
+
+<style>
+    div {
+        text-align: center;
+    }
+    h2 {
+        font-family: arial;
+        color: rgb(150, 150, 150);
+    }
+    body {
+        background-color: rgb(45, 45, 45);
+    }
+    button {
+        border: none;
+        background-color: rgb(100, 100, 100);
+        color: rgb(45, 45, 45);
+        font-size: medium;
+    }
+    input {
+        color: rgb(200, 200, 200);
+        background-color: rgb(100, 100, 100);
+        font-size: 16px;
+        border: none;
+    }
+    #header {
+        color: rgb(150, 150, 150);
+        font-family: arial;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1 id="header">My Javascript Website!</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <input id="nameInput">
+        <button onclick="buttonClick()">click me!</button>
+        <h2 id="greeting">Hello...</h2>
+    </div>
+</body>
+
+<script>
+    function buttonClick() {
+        var name = document.getElementById("nameInput").value;
+        document.getElementById("greeting").innerHTML = "Hello " + name + "!"
+    }
+</script>
+
+- as you can see, we can also style specific id elements using a hashtag (#) in css
